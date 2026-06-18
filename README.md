@@ -48,7 +48,8 @@ healthcare-support-app/
 ├── styles.css
 ├── script.js
 └── README.md
-```
 
-## Note
+
+
+
 This is a concept-level prototype and does not provide medical diagnosis or treatment advice.
