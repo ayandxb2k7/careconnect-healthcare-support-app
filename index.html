@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareConnect NGO Healthcare Support</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">+</div>
+      <div>
+        <h1>CareConnect</h1>
+        <p>NGO Healthcare Support Portal</p>
+      </div>
+    </div>
+    <a href="#support-form" class="nav-btn">Request Support</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Concept-Level Healthcare Support App</span>
+        <h2>Helping NGOs manage patient requests faster and smarter.</h2>
+        <p>A simple web app prototype for patient support registration, volunteer coordination, and AI-assisted symptom/request summarization.</p>
+        <div class="hero-actions">
+          <a href="#support-form" class="primary-btn">Create Request</a>
+          <button class="secondary-btn" onclick="scrollToSection('ai-demo')">View AI Idea</button>
+        </div>
+        <div class="stats">
+          <div><strong>24/7</strong><span>Request Intake</span></div>
+          <div><strong>AI</strong><span>Summary Concept</span></div>
+          <div><strong>NGO</strong><span>Volunteer Ready</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="pulse"></div>
+        <h3>Live Request Preview</h3>
+        <p class="muted">Patient support requests are summarized for faster volunteer response.</p>
+        <div class="mini-card"><span class="dot green"></span><div><b>Urgent Support</b><p>Fever, cough, weakness detected from description.</p></div></div>
+        <div class="mini-card"><span class="dot blue"></span><div><b>Volunteer Action</b><p>Call patient, verify location, suggest clinic visit.</p></div></div>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <div class="info-card"><h3>For Patients</h3><p>Submit basic details, support need, symptoms, and city through a clean form.</p></div>
+      <div class="info-card"><h3>For Volunteers</h3><p>Receive a readable AI-style summary to understand cases quickly.</p></div>
+      <div class="info-card"><h3>For NGOs</h3><p>Reduce manual sorting and improve response time for healthcare support requests.</p></div>
+    </section>
+
+    <section id="support-form" class="app-panel">
+      <div class="panel-left">
+        <span class="section-label">Patient / Volunteer Registration</span>
+        <h2>Submit Healthcare Support Request</h2>
+        <p>Fill the form below. The app creates an automated summary and priority level based on the entered description.</p>
+
+        <form id="careForm">
+          <div class="form-row">
+            <label>Full Name<input type="text" id="name" placeholder="Ayan Khan" required /></label>
+            <label>Phone Number<input type="tel" id="phone" placeholder="+971 58 000 0000" required /></label>
+          </div>
+          <div class="form-row">
+            <label>Age<input type="number" id="age" placeholder="18" min="1" max="120" required /></label>
+            <label>City<input type="text" id="city" placeholder="Dubai" required /></label>
+          </div>
+          <label>Request Type
+            <select id="requestType">
+              <option>Patient Support</option>
+              <option>Volunteer Registration</option>
+              <option>Medical Camp Enquiry</option>
+              <option>Emergency Follow-up</option>
+            </select>
+          </label>
+          <label>Describe the situation
+            <textarea id="description" rows="5" placeholder="Example: Patient has fever and cough for 3 days and needs help finding a nearby clinic." required></textarea>
+          </label>
+          <button type="submit" class="submit-btn">Generate Support Summary</button>
+        </form>
+      </div>
+
+      <div class="panel-right" id="ai-demo">
+        <span class="section-label">AI / Automation Concept</span>
+        <h2>AI Summary Output</h2>
+        <div id="emptyState" class="empty-state"><div class="empty-icon">🤖</div><p>Submit the form to generate an automated summary.</p></div>
+        <div id="resultCard" class="result-card hidden">
+          <div class="result-header">
+            <div><h3 id="resultName">Patient Name</h3><p id="resultMeta">City • Request Type</p></div>
+            <span id="priorityBadge" class="priority">Normal</span>
+          </div>
+          <div class="summary-box"><h4>Detected Keywords</h4><div id="keywords" class="chips"></div></div>
+          <div class="summary-box"><h4>AI-Style Summary</h4><p id="summaryText"></p></div>
+          <div class="summary-box"><h4>Suggested NGO Action</h4><ul id="actions"></ul></div>
+          <p class="disclaimer">Disclaimer: This is a concept-level AI automation demo and not medical advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow">
+      <span class="section-label">NGO Use Case</span>
+      <h2>How this helps an NGO</h2>
+      <div class="timeline">
+        <div><b>1. Collect</b><p>Patients or volunteers submit support requests.</p></div>
+        <div><b>2. Summarize</b><p>Automation extracts important symptoms and request type.</p></div>
+        <div><b>3. Prioritize</b><p>Urgent words increase priority for faster volunteer attention.</p></div>
+        <div><b>4. Respond</b><p>Volunteer receives a clean action list and follows up.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>Built for Mini Healthcare Support Web App Assignment • HTML, CSS, JavaScript</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
